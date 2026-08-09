@@ -1,5 +1,9 @@
 # HealthMate
 
+<p align="center">
+  <img src="assets/logo.svg" alt="HealthMate" width="700">
+</p>
+
 HealthMate 是一个桌面陪伴式个人健康 AI 助手。后端基于 FastAPI + LangGraph，前端是 Electron 桌宠。
 
 宠物会陪你聊天、记住你的健康档案、每天自动归档对话内容，还会主动提醒你活动、吃饭和休息，并支持免按键的语音对话。

@@ -1,5 +1,9 @@
 # HealthMate
 
+<p align="center">
+  <img src="assets/logo.svg" alt="HealthMate" width="700">
+</p>
+
 HealthMate is a personal healthcare AI companion that lives on your desktop as a cute pet. It is built with FastAPI + LangGraph on the backend and an Electron desktop pet on the frontend.
 
 The pet talks with you, remembers your health profile, archives daily conversations, offers proactive reminders, and supports hands-free voice conversation.
