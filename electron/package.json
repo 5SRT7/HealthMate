@@ -1,0 +1,9 @@
+{
+  "name": "healthmate-pet",
+  "version": "1.0.0",
+  "description": "HealthMate Desktop Pet",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}
