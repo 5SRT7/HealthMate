@@ -11,12 +11,12 @@ The pet talks with you, remembers your health profile, archives daily conversati
 ## Demo
 
 <p align="center">
-  <img src="assets/demo/usage.gif" alt="Agent function demo" width="720">
+  <img src="assets/demo/usage.gif" alt="Agent function demo" width="320">
   <br><em>Agent function demo</em>
 </p>
 
 <p align="center">
-  <img src="assets/demo/reminder.gif" alt="Reminder demo" width="720">
+  <img src="assets/demo/reminder.gif" alt="Reminder demo" width="320">
   <br><em>Reminder demo</em>
 </p>
 

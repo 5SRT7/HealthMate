@@ -11,12 +11,12 @@ HealthMate 是一个桌面陪伴式个人健康 AI 助手。后端基于 FastAPI
 ## 演示
 
 <p align="center">
-  <img src="assets/demo/usage.gif" alt="智能体功能演示" width="720">
+  <img src="assets/demo/usage.gif" alt="智能体功能演示" width="320">
   <br><em>智能体功能演示</em>
 </p>
 
 <p align="center">
-  <img src="assets/demo/reminder.gif" alt="提醒功能演示" width="720">
+  <img src="assets/demo/reminder.gif" alt="提醒功能演示" width="320">
   <br><em>提醒功能演示</em>
 </p>
 
