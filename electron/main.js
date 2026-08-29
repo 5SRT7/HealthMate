@@ -27,9 +27,13 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 180, height: 120,
     frame: false, transparent: true,
+    titleBarStyle: process.platform === 'darwin' ? 'customButtonsOnHover' : undefined,
     alwaysOnTop: true, hasShadow: false, resizable: false,
     webPreferences: { preload: path.join(__dirname, 'preload.js'), nodeIntegration: false, contextIsolation: true },
   });
+  if (process.platform === 'darwin') {
+    try { mainWindow.setWindowButtonVisibility(false); } catch (e) {}
+  }
   mainWindow.loadURL(URL+'?_t='+Date.now()).catch(e => console.error('Load fail:', e.message));
   mainWindow.webContents.on('did-fail-load', (ev, code) => {
     if (code===-102) mainWindow.loadURL('data:text/html,'+encodeURIComponent('<body style="display:flex;align-items:center;justify-content:center;height:100vh;background:#0f111f;color:rgba(255,255,255,.5);font-family:sans-serif;font-size:11px;border-radius:16px;"><p>后端未启动</p></body>'));
@@ -47,6 +51,11 @@ function createWindow() {
 
 ipcMain.on('close-app', ()=>{app.isQuitting=true;app.quit()});
 ipcMain.on('resize-window', (e, {width, height}) => { if (mainWindow) mainWindow.setSize(width, height); });
+ipcMain.on('move-window', (e, {dx, dy}) => {
+  if (!mainWindow) return;
+  const [x, y] = mainWindow.getPosition();
+  mainWindow.setPosition(Math.round(x + dx), Math.round(y + dy));
+});
 
 app.whenReady().then(async () => {
   startBackend();
